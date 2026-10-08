@@ -5,23 +5,23 @@
 class Wgtun < Formula
   desc "WireGuard orchestrator: TUI + launchd daemon for wireguard-go"
   homepage "https://github.com/dncore/wgtun"
-  version "0.3.0"
+  version "0.3.1"
   license "MIT"
 
   depends_on "wireguard-go"
   depends_on :macos
 
   if Hardware::CPU.intel?
-    url "https://github.com/dncore/wgtun/releases/download/v0.3.0/wgtun_0.3.0_darwin_amd64.zip"
-    sha256 "c5cedf2331d32d7be5b335be8f594e54def58f92419b624f8f16cfe127cd474d"
+    url "https://github.com/dncore/wgtun/releases/download/v0.3.1/wgtun_0.3.1_darwin_amd64.zip"
+    sha256 "5e350395b7d60428ba8884db7c5353b1ee2d5ea24012a7ed0a9ae45e20b26e39"
 
     def install
       bin.install "wgtun"
     end
   end
   if Hardware::CPU.arm?
-    url "https://github.com/dncore/wgtun/releases/download/v0.3.0/wgtun_0.3.0_darwin_arm64.zip"
-    sha256 "ce70af51044cf9d9b73a3457ef08a894d04046bcf03d85121b14e0cb47be67e7"
+    url "https://github.com/dncore/wgtun/releases/download/v0.3.1/wgtun_0.3.1_darwin_arm64.zip"
+    sha256 "55428245ea6dc020ef5e9c1f0a21d144cc0d4c5c933af3f1af107657c924cb1e"
 
     def install
       bin.install "wgtun"
