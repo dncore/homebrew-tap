@@ -5,23 +5,23 @@
 class Wgtun < Formula
   desc "WireGuard orchestrator: TUI + root daemon (launchd/systemd)"
   homepage "https://github.com/dncore/wgtun"
-  version "0.4.0"
+  version "0.4.1"
   license "MIT"
 
   depends_on "wireguard-go"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/dncore/wgtun/releases/download/v0.4.0/wgtun_0.4.0_darwin_amd64.zip"
-      sha256 "15bd685372fd7f6953b3a280e2faad28fe4abcad71cecbd4a3803a4294cd0574"
+      url "https://github.com/dncore/wgtun/releases/download/v0.4.1/wgtun_0.4.1_darwin_amd64.zip"
+      sha256 "70abbac8025588d52c7709178ecbe1829ee16f2d4dbd789bee56409fb598d830"
 
       def install
         bin.install "wgtun"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/dncore/wgtun/releases/download/v0.4.0/wgtun_0.4.0_darwin_arm64.zip"
-      sha256 "66c1ec3e39821a5e46d64d0edd3d20aa805c716022f297da0002b6f33429fcd5"
+      url "https://github.com/dncore/wgtun/releases/download/v0.4.1/wgtun_0.4.1_darwin_arm64.zip"
+      sha256 "4c99796c1d1ebc09c105013486310ec128b300ddfde452021098ae729388a92e"
 
       def install
         bin.install "wgtun"
@@ -32,8 +32,8 @@ class Wgtun < Formula
   on_linux do
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/dncore/wgtun/releases/download/v0.4.0/wgtun_0.4.0_linux_amd64.tar.gz"
-        sha256 "a60ede1d18a8f0c74687fa852c6be6dc661527f275ded06b9cde91cb2d4ea007"
+        url "https://github.com/dncore/wgtun/releases/download/v0.4.1/wgtun_0.4.1_linux_amd64.tar.gz"
+        sha256 "7a91de6a0f0cc4242adaa1af5faa6d0b83d71c1033b206026a93db605ee65440"
 
         def install
           bin.install "wgtun"
@@ -42,8 +42,8 @@ class Wgtun < Formula
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/dncore/wgtun/releases/download/v0.4.0/wgtun_0.4.0_linux_arm64.tar.gz"
-        sha256 "92b0d47aa2cd96d535459061aebad8b54005d7827fc70f6375c72d502a876bd3"
+        url "https://github.com/dncore/wgtun/releases/download/v0.4.1/wgtun_0.4.1_linux_arm64.tar.gz"
+        sha256 "1e7a1da7fd2e076318fc510abbcc3e164bb9d74e9c53c46364433ca71b0fcff0"
 
         def install
           bin.install "wgtun"
